@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Form with Lists, Tables, and Media</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      header,
+      main,
+      footer {
+        max-width: 800px;
+        margin: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+      fieldset {
+        border: 1px solid #aaa;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: auto;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Our Information & Form Page</h1>
+      <p>
+        This page demonstrates the use of lists, tables, media, and an HTML5
+        form with native validation.
+      </p>
+    </header>
+
+    <main>
+      <!-- Lists Section -->
+      <section>
+        <h2>Popular Web Technologies</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+
+        <h3>Steps to Build a Simple Web Page</h3>
+        <ol>
+          <li>Plan your layout and content.</li>
+          <li>Write semantic HTML structure.</li>
+          <li>Style with CSS.</li>
+          <li>Test and validate your page.</li>
+        </ol>
+      </section>
+
+      <!-- Table Section -->
+      <section>
+        <h2>Web Browser Market Share (Sample Data)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Browser</th>
+              <th>Market Share</th>
+              <th>Supports HTML5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Chrome</td>
+              <td>65%</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Mozilla Firefox</td>
+              <td>10%</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Safari</td>
+              <td>18%</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Media Section -->
+      <section>
+        <h2>Web Development Media</h2>
+        <figure>
+          <img
+            src="IMG-20250320-WA0020 (1).jpg"
+            alt="Sample web development graphic"
+          />
+          <figcaption>
+            Figure 1: A placeholder image representing web design.
+          </figcaption>
+        </figure>
+        <video controls>
+          <source
+            src="https://www.youtube.com/watch?v=tchCCDgzDv4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Form Section -->
+      <section>
+        <h2>Contact & Registration Form</h2>
+        <form action="#" method="post" novalidate>
+          <!-- Personal Info -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="John Doe"
+              required
+              minlength="3"
+            />
+
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@mail.com"
+              required
+              autocomplete="email"
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123-456-7890"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+            />
+          </fieldset>
+
+          <!-- Account Info -->
+          <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="5"
+              maxlength="15"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+            />
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+              minlength="8"
+            />
+          </fieldset>
+
+          <!-- Preferences -->
+          <fieldset>
+            <legend>Preferences</legend>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">--Select Country--</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="au">Australia</option>
+            </select>
+
+            <label>Subscription Type:</label>
+            <input
+              type="radio"
+              id="basic"
+              name="subscription"
+              value="basic"
+              required
+            />
+            <label for="basic">Basic</label>
+            <input
+              type="radio"
+              id="premium"
+              name="subscription"
+              value="premium"
+            />
+            <label for="premium">Premium</label>
+
+            <label>Interests:</label>
+            <input
+              type="checkbox"
+              id="webdev"
+              name="interests"
+              value="webdev"
+            />
+            <label for="webdev">Web Development</label>
+            <input
+              type="checkbox"
+              id="design"
+              name="interests"
+              value="design"
+            />
+            <label for="design">Design</label>
+            <input
+              type="checkbox"
+              id="marketing"
+              name="interests"
+              value="marketing"
+            />
+            <label for="marketing">Marketing</label>
+          </fieldset>
+
+          <!-- Additional Notes -->
+          <fieldset>
+            <legend>Additional Notes</legend>
+            <label for="notes">Your Message:</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Write your message here..."
+            ></textarea>
+
+            <label for="referral">Referral Code (readonly example):</label>
+            <input
+              type="text"
+              id="referral"
+              name="referral"
+              value="WEB2025"
+              readonly
+            />
+          </fieldset>
+
+          <!-- Submit -->
+          <input type="submit" value="Submit Form" />
+          <input type="reset" value="Reset Form" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Wenceslaus wesilei. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
